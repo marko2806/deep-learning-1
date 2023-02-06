@@ -1,0 +1,132 @@
+rnn_type = rnn bidirectional = False hidden_site = 50 num_layers = 2 dropout = 0
+Evaluation finished, accuracy: 59.28899082568807
+rnn_type = rnn bidirectional = False hidden_site = 50 num_layers = 10 dropout = 0
+Evaluation finished, accuracy: 50.917431192660544
+rnn_type = rnn bidirectional = False hidden_site = 150 num_layers = 5 dropout = 0.5
+Evaluation finished, accuracy: 50.57339449541285
+rnn_type = rnn bidirectional = True hidden_site = 150 num_layers = 10 dropout = 0
+Evaluation finished, accuracy: 70.29816513761467
+rnn_type = rnn bidirectional = True hidden_site = 300 num_layers = 2 dropout = 0.25
+Evaluation finished, accuracy: 72.36238532110092
+
+rnn_type = gru bidirectional = True hidden_site = 50 num_layers = 10 dropout = 0.5
+Evaluation finished, accuracy: 79.47247706422019
+rnn_type = gru bidirectional = True hidden_site = 150 num_layers = 5 dropout = 0.5
+Evaluation finished, accuracy: 79.35779816513761
+
+rnn_type = gru bidirectional = False hidden_site = 300 num_layers = 2 dropout = 0
+Evaluation finished, accuracy: 79.70183486238533
+
+rnn_type = gru bidirectional = False hidden_site = 300 num_layers = 2 dropout = 0.25
+Evaluation finished, accuracy: 75.22935779816514
+rnn_type = gru bidirectional = True hidden_site = 300 num_layers = 2 dropout = 0.25
+Evaluation finished, accuracy: 77.29357798165137
+
+rnn_type = lstm bidirectional = True hidden_site = 50 num_layers = 2 dropout = 0.25
+Evaluation finished, accuracy: 73.62385321100918
+rnn_type = lstm bidirectional = True hidden_site = 50 num_layers = 5 dropout = 0.25
+Evaluation finished, accuracy: 78.78440366972477
+rnn_type = lstm bidirectional = True hidden_site = 50 num_layers = 10 dropout = 0.5
+Evaluation finished, accuracy: 76.4908256880734
+rnn_type = lstm bidirectional = True hidden_site = 300 num_layers = 2 dropout = 0.5
+Evaluation finished, accuracy: 75.57339449541286
+rnn_type = lstm bidirectional = False hidden_site = 300 num_layers = 10 dropout = 0.25
+Evaluation finished, accuracy: 50.917431192660544
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+Bez prednaučenih vektorskih reprezentacija
+baseline
+Evaluation finished, accuracy: 76.72018348623854
+rnn_type = gru bidirectional = False hidden_site = 300 num_layers = 2 dropout = 0
+Evaluation finished, accuracy: 74.19724770642202
+
+
+Sa naučenim vektorskim reprezentacijama
+baseline
+Evaluation finished, accuracy: 76.94954128440367
+rnn_type = gru bidirectional = False hidden_site = 300 num_layers = 2 dropout = 0
+Evaluation finished, accuracy: 79.70183486238533
+
+
+--------------------------------------
+--------------------------------------
+
+Utjecaj parametara
+
+--------------------------------------
+
+baseline
+
+batch size 
+
+5	77.29357798165137
+10 	76.94954128440367
+32	75.22935779816514
+64      76.14678899082568
+
+- nema utjecaja
+
+min frekvencija
+
+1	78.09633027522935
+2	77.63761467889908
+5	75.68807339449542
+10	71.90366972477065
+20 	72.01834862385321
+
+
+dimenzionalnost skrivenih slojeva
+
+50	71.78899082568807
+100	77.86697247706422
+150	73.5091743119266
+300	73.96788990825688
+
+freeze
+False	78.09633027522935
+True	77.86697247706422
+
+----------------------------------------
+
+rnn
+
+batch size 
+
+5	80.38990825688074
+10 	80.16055045871559
+32	76.4908256880734
+64      70.87155963302753
+128	70.75688073394495
+
+- veći batch - manja preciznost
+
+min frekvencija
+
+1	71.10091743119266
+5	79.47247706422019
+10	78.6697247706422
+20 	72.13302752293578
+
+
+dimenzionalnost skrivenih slojeva
+
+50	75.57339449541286
+100	78.21100917431193
+150	79.24311926605505
+300	77.98165137614679
+
+
+freeze
+True	78.09633027522935
+False	78.44036697247707
+
+dropout
+0	74.88532110091744
+0.25	69.15137614678899
+0.5	70.18348623853211
+
+
+
+
